@@ -5,8 +5,6 @@ using TodoAPI.Models;
 
 namespace TodoAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class UserController : ApiController<User>
     {
         private readonly IApiService<User> _userService;
