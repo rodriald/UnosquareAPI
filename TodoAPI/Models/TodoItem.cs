@@ -6,9 +6,11 @@ namespace TodoAPI.Models
 
         public long? UserId { get; set; }
 
+        public long? TodoListId { get; set; }
+
         public string Name { get; set; }
 
         public bool IsComplete { get; set; }
-        
+
     }
 }
