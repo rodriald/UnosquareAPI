@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
 using TodoAPI.Models;
 
 namespace TodoAPI.Controllers
@@ -9,7 +8,7 @@ namespace TodoAPI.Controllers
     {
         private readonly IApiService<TodoItem> _todoService;
 
-        public TodoController(IApiService<TodoItem> apiService)
+        public TodoController(IApiService<TodoItem> apiService):base(apiService)
         {
             _todoService = apiService;
         }

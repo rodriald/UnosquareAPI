@@ -1,10 +1,6 @@
 using Xunit;
 using TodoAPI.Models;
-using System;
-using System.Data.SqlClient;
-using Microsoft.EntityFrameworkCore.InMemory;
 using Microsoft.EntityFrameworkCore;
-using System.Threading;
 using System.Linq;
 
 namespace TodoUnitTests

@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using TodoAPI.Models;
-using System.Collections.Generic;
 
 namespace TodoAPI.Controllers
 {
@@ -14,19 +7,58 @@ namespace TodoAPI.Controllers
     [ApiController]
     public abstract class ApiController<T> : ControllerBase
     {
+
+        private readonly IApiService<T> _apiService;
+
+        public IApiService<T> ApiService { get { return _apiService; } }
+
+        public ApiController(IApiService<T> apiService) {
+            _apiService = apiService;
+        }
+
         [HttpGet]
-        public abstract ActionResult<List<T>> GetAll();
+        public virtual ActionResult<List<T>> GetAll() {
+            return ApiService.GetAll();
+        }
 
         [HttpGet("{id}", Name = "GetItem")]
-        public abstract ActionResult<T> GetById(long id);
+        public virtual ActionResult<T> GetById(long id) {
+            var user = _apiService.GetById(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return user;
+        }
 
         [HttpPost]
-        public abstract IActionResult Create(T item);
+        public virtual IActionResult Create(T item) {
+            ApiService.Create(item);
+            return CreatedAtRoute("GetItem", new { id = typeof(T).GetProperty("Id").GetValue(item) }, item);
+        }
 
         [HttpPut("{id}")]
-        public abstract IActionResult Update(long id, T item);
+        public virtual IActionResult Update(long id, T item) {
+            var user = _apiService.GetById(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            _apiService.Update(id, item);
+
+            return NoContent();
+        }
 
         [HttpDelete("{id}")]
-        public abstract IActionResult Delete(long id);
+        public virtual IActionResult Delete(long id) {
+            var user = _apiService.Delete(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
     }
 }
