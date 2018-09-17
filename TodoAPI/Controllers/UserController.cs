@@ -4,17 +4,13 @@ using TodoAPI.Models;
 
 namespace TodoAPI.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class UserController : ApiController<User>
     {
-        public UserController(IApiService<User> userService):base(userService)
+        public UserController(IApiService<User> userService) : base(userService)
         {
-            
-        }
 
-        [HttpGet("{id}", Name = "GetUser")]
-        public override ActionResult<User> GetById(long id)
-        {
-            return base.GetById(id);
         }
     }
 }
