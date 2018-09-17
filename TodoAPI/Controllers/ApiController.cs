@@ -33,8 +33,8 @@ namespace TodoAPI.Controllers
 
         [HttpPost]
         public virtual IActionResult Create(T item) {
-            ApiService.Create(item);
-            return CreatedAtRoute("GetItem", new { id = typeof(T).GetProperty("Id").GetValue(item) }, item);
+            long itemId = ApiService.Create(item, out string todotype);
+            return CreatedAtRoute(todotype, new { id = itemId }, item);
         }
 
         [HttpPut("{id}")]

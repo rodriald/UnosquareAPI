@@ -5,7 +5,7 @@
         List<T> GetAll();
 
         T GetById(long id);
-        void Create(T item);
+        long Create(T item, out string todotype);
         T Delete(long id);
         T Update(long id, T item);
     }

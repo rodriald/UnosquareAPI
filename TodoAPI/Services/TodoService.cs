@@ -12,10 +12,12 @@ public class TodoService : IApiService<TodoItem>
         _context = context;
     }
     
-    public void Create(TodoItem item)
+    public long Create(TodoItem item, out string todotype)
     {
         _context.TodoItems.Add(item);
         _context.SaveChanges();
+        todotype = "GetTodo";
+        return item.Id;
     }
 
     public TodoItem Delete(long id)

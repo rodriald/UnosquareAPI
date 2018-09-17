@@ -6,18 +6,15 @@ namespace TodoAPI.Controllers
 {
     public class UserController : ApiController<User>
     {
-        //private readonly IApiService<User> _userService;
-
         public UserController(IApiService<User> userService):base(userService)
         {
             
         }
 
-        public override IActionResult Create(User item)
+        [HttpGet("{id}", Name = "GetUser")]
+        public override ActionResult<User> GetById(long id)
         {
-            ApiService.Create(item);
-            return CreatedAtRoute("GetUser", new { id = item.Id }, item);
+            return base.GetById(id);
         }
-        
     }
 }

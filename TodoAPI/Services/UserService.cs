@@ -11,10 +11,12 @@ public class UserService : IApiService<User>
         _context = context;
     }
 
-    public void Create(User user)
+    public long Create(User user, out string todotype)
     {
         _context.Users.Add(user);
         _context.SaveChanges();
+        todotype = "GetUser";
+        return user.Id;
     }
 
     public User Delete(long id)
