@@ -1,0 +1,17 @@
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\xunit.runner.visualstudio.testadapter.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\xunit.runner.reporters.net452.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\xunit.runner.utility.net452.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\xunit.abstractions.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\UnitTests.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\UnitTests.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\xunit.assert.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\xunit.core.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\bin\Debug\net452\xunit.execution.desktop.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\obj\Debug\net452\UnitTests.csprojAssemblyReference.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\obj\Debug\net452\UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\obj\Debug\net452\UnitTests.AssemblyInfoInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\obj\Debug\net452\UnitTests.AssemblyInfo.cs
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\obj\Debug\net452\UnitTests.csproj.CopyComplete
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\obj\Debug\net452\UnitTests.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\UnitTests\obj\Debug\net452\UnitTests.pdb

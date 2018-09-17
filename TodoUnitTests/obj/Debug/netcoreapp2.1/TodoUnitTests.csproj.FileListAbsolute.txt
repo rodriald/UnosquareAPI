@@ -1,0 +1,17 @@
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.csprojAssemblyReference.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.csproj.CoreCompileInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.AssemblyInfoInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.AssemblyInfo.cs
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\TodoUnitTests.deps.json
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\TodoUnitTests.runtimeconfig.json
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\TodoUnitTests.runtimeconfig.dev.json
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\TodoUnitTests.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\TodoUnitTests.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\TodoAPI.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\TodoAPI.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.csproj.CopyComplete
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.pdb
