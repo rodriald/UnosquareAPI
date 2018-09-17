@@ -5,23 +5,26 @@ using TodoAPI.Models;
 
 namespace TodoAPI.Controllers
 {
-    public class TodoController : ApiController<TodoItem>
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TodoController : ControllerBase
     {
         private readonly IApiService<TodoItem> _todoService;
 
-        public TodoController(IApiService<TodoItem> apiService)
+        public TodoController(IApiService<TodoItem> todoService)
         {
-            _todoService = apiService;
+            _todoService = todoService;
         }
 
-        
-        public override ActionResult<List<TodoItem>> GetAll()
+
+        [HttpGet]
+        public ActionResult<List<TodoItem>> GetAll()
         {
             return _todoService.GetAll();
         }
 
         [HttpGet("{id}", Name = "GetTodo")]
-        public override ActionResult<TodoItem> GetById(long id)
+        public ActionResult<TodoItem> GetById(long id)
         {
             var item = _todoService.GetById(id);
             if (item == null)
@@ -31,15 +34,15 @@ namespace TodoAPI.Controllers
             return item;
         }
 
-        
-        public override IActionResult Create(TodoItem item)
+        [HttpPost]
+        public IActionResult Create(TodoItem item)
         {
             _todoService.Create(item);
             return CreatedAtRoute("GetTodo", new { id = item.Id }, item);
         }
 
-        
-        public override IActionResult Update(long id, TodoItem item)
+        [HttpPut("{id}")]
+        public IActionResult Update(long id, TodoItem item)
         {
             var todo = _todoService.GetById(id);
             if (todo == null)
@@ -52,8 +55,8 @@ namespace TodoAPI.Controllers
             return NoContent();
         }
 
-        
-        public override IActionResult Delete(long id)
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
         {
             var todo = _todoService.Delete(id);
             if (todo == null)

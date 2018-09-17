@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using TodoAPI.Models;
 
@@ -50,9 +51,17 @@ public class TodoService : IApiService<TodoItem>
             return null;
         }
 
+        /*Properties test*/
+        PropertyInfo[] properties = typeof(TodoItem).GetProperties();
+        foreach (PropertyInfo property in properties) {
+            if(!property.Name.Equals("Id"))
+                property.SetValue(todo, property.GetValue(item));
+        }
+        /**/
         todo.IsComplete = item.IsComplete;
         todo.Name = item.Name;
         todo.UserId = item.UserId;
+        
 
         _context.TodoItems.Update(todo);
         _context.SaveChanges();

@@ -7,7 +7,7 @@ namespace TodoAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : ApiController<User>
     {
         private readonly IApiService<User> _userService;
 
@@ -16,15 +16,13 @@ namespace TodoAPI.Controllers
             _userService = userService;
         }
 
-
-        [HttpGet]
-        public ActionResult<List<User>> GetAll()
+        public override ActionResult<List<User>> GetAll()
         {
             return _userService.GetAll();
         }
 
         [HttpGet("{id}", Name = "GetUser")]
-        public ActionResult<User> GetById(long id)
+        public override ActionResult<User> GetById(long id)
         {
             var user = _userService.GetById(id);
             if (user == null)
@@ -34,15 +32,13 @@ namespace TodoAPI.Controllers
             return user;
         }
 
-        [HttpPost]
-        public IActionResult Create(User user)
+        public override IActionResult Create(User item)
         {
-            _userService.Create(user);
-            return CreatedAtRoute("GetUser", new { id = user.Id }, user);
+            _userService.Create(item);
+            return CreatedAtRoute("GetUser", new { id = item.Id }, item);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Update(long id, User newUser)
+        public override IActionResult Update(long id, User item)
         {
             var user = _userService.GetById(id);
             if (user == null)
@@ -50,13 +46,12 @@ namespace TodoAPI.Controllers
                 return NotFound();
             }
 
-            _userService.Update(id, newUser);
+            _userService.Update(id, item);
 
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(long id)
+        public override IActionResult Delete(long id)
         {
             var user = _userService.Delete(id);
             if (user == null)
