@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TodoAPI.Models;
 
-public class UserService : IUserService
+public class UserService : IApiService<User>
 {
     private readonly TodoContext _context;
 

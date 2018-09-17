@@ -9,9 +9,9 @@ namespace TodoAPI.Controllers
     [ApiController]
     public class TodoController : ControllerBase
     {
-        private readonly ITodoService _todoService;
+        private readonly IApiService<TodoItem> _todoService;
 
-        public TodoController(ITodoService todoService)
+        public TodoController(IApiService<TodoItem> todoService)
         {
             _todoService = todoService;
         }

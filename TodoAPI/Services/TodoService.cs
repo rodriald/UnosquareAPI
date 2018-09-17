@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using TodoAPI.Models;
 
-public class TodoService : ITodoService
+public class TodoService : IApiService<TodoItem>
 {
 
     private readonly TodoContext _context;

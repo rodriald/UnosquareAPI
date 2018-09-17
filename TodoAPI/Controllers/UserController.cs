@@ -9,9 +9,9 @@ namespace TodoAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserService _userService;
+        private readonly IApiService<User> _userService;
 
-        public UserController(IUserService userService)
+        public UserController(IApiService<User> userService)
         {
             _userService = userService;
         }
