@@ -36,7 +36,8 @@ namespace TodoAPI.Controllers
         public virtual IActionResult Create(T item)
         {
             long itemId = _apiService.Create(item, out string todotype);
-            return CreatedAtRoute(todotype, new { id = itemId }, item);
+            return RedirectToAction("GetById", "ApiController", new { id = itemId });
+            //return CreatedAtRoute(todotype, new { id = itemId }, item);
         }
 
         [HttpPut("{id}")]

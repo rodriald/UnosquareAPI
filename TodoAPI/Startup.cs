@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TodoAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using TodoAPI.Services;
 
 namespace TodoAPI
 {
@@ -22,6 +23,7 @@ namespace TodoAPI
         {
             services.AddScoped<IApiService<TodoItem>, TodoService>();
             services.AddScoped<IApiService<User>, UserService>();
+            services.AddScoped<IApiService<TodoList>, TodoListService>();
 
             var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<TodoContext>
