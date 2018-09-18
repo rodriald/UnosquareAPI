@@ -15,3 +15,7 @@ C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreap
 C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.csproj.CopyComplete
 C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.dll
 C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\obj\Debug\netcoreapp2.1\TodoUnitTests.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\Todo.Data.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\Todo.Service.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\Todo.Data.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\API\TodoUnitTests\bin\Debug\netcoreapp2.1\Todo.Service.pdb

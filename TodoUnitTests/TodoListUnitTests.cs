@@ -2,82 +2,83 @@
 using Todo.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using TodoAPI.Services;
 
 namespace TodoUnitTests
 {
-    public class UserUnitTests
+    public class TodoListUnitTests
     {
         [Fact]
-        public void CreateUser()
+        public void CreateList()
         {
             var options = new DbContextOptionsBuilder<TodoContext>()
                 .UseInMemoryDatabase(databaseName: "Add_writes_to_database")
                 .Options;
             using (var context = new TodoContext(options))
             {
-                var service = new UserService(context);
-                User user = new User();
-                user.Name = "Aldo";
-                service.Create(user);
+                var service = new TodoListService(context);
+                TodoList list = new TodoList();
+                list.Name = "New list";
+                service.Create(list);
             }
             using (var context = new TodoContext(options))
             {
 
-                Assert.Equal(1, context.Users.ToList().Count);
-            }
-        }
-
-        [Fact]
-        public void UpdateUser()
-        {
-            var options = new DbContextOptionsBuilder<TodoContext>()
-                .UseInMemoryDatabase(databaseName: "Add_writes_to_database")
-                .Options;
-            using (var context = new TodoContext(options))
-            {
-                var service = new UserService(context);
-                User user= new User();
-                user.Name = "Aldo";
-                user.Id = 1;
-                service.Create(user);
-                User newUser = new User();
-                newUser.Name = "Jourge";
-                Assert.NotEqual(user, service.Update(1, newUser));
+                Assert.Equal(1, context.TodoLists.ToList().Count);
             }
         }
 
         [Fact]
-        public void DeleteUser()
+        public void UpdateList()
         {
             var options = new DbContextOptionsBuilder<TodoContext>()
                 .UseInMemoryDatabase(databaseName: "Add_writes_to_database")
                 .Options;
             using (var context = new TodoContext(options))
             {
-                var service = new UserService(context);
-                User user = new User();
-                user.Name = "Aldo";
-                user.Id = 1;
-                service.Create(user);
+                var service = new TodoListService(context);
+                TodoList list = new TodoList();
+                list.Name = "New List";
+                list.Id = 1;
+                service.Create(list);
+                TodoList newList= new TodoList();
+                newList.Name = "Old list";
+                Assert.NotEqual(list, service.Update(1, newList));
+            }
+        }
+
+        [Fact]
+        public void DeleteList()
+        {
+            var options = new DbContextOptionsBuilder<TodoContext>()
+                .UseInMemoryDatabase(databaseName: "Add_writes_to_database")
+                .Options;
+            using (var context = new TodoContext(options))
+            {
+                var service = new TodoListService(context);
+                TodoList list = new TodoList();
+                list.Name = "New list";
+                list.Id = 1;
+                service.Create(list);
                 service.Delete(1);
-                Assert.Equal(0, context.Users.ToList().Count);
+                Assert.Equal(0, context.TodoLists.ToList().Count);
             }
         }
 
         [Fact]
-        public void SearchUser()
+        public void SearchList()
         {
             var options = new DbContextOptionsBuilder<TodoContext>()
                 .UseInMemoryDatabase(databaseName: "Add_writes_to_database")
                 .Options;
             using (var context = new TodoContext(options))
             {
-                var service = new UserService(context);
-                User user = new User();
-                user.Name = "Aldo";
-                user.Id = 1;
-                service.Create(user);
-                Assert.Equal(service.GetById(1), user);
+                var service = new TodoListService(context);
+                TodoList list = new TodoList();
+                list.Name = "New list";
+                list.Id = 1;
+                service.Create(list);
+                Assert.Equal(service.GetById(1), list);
             }
         }
     }

@@ -1,5 +1,5 @@
 using Xunit;
-using TodoAPI.Models;
+using Todo.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
