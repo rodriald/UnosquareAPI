@@ -1,0 +1,9 @@
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\bin\Debug\netcoreapp2.1\Todo.Data.deps.json
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\bin\Debug\netcoreapp2.1\Todo.Data.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\bin\Debug\netcoreapp2.1\Todo.Data.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\obj\Debug\netcoreapp2.1\Todo.Data.csprojAssemblyReference.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\obj\Debug\netcoreapp2.1\Todo.Data.csproj.CoreCompileInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\obj\Debug\netcoreapp2.1\Todo.Data.AssemblyInfoInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\obj\Debug\netcoreapp2.1\Todo.Data.AssemblyInfo.cs
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\obj\Debug\netcoreapp2.1\Todo.Data.dll
+C:\Users\aldo.rodriguez\Documents\Projects\API\Todo.Data\obj\Debug\netcoreapp2.1\Todo.Data.pdb
