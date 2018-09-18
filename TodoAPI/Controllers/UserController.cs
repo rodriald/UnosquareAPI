@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using TodoAPI.Models;
+using Todo.Data.Models;
 
 namespace TodoAPI.Controllers
 {
@@ -8,6 +8,8 @@ namespace TodoAPI.Controllers
     [ApiController]
     public class UserController : ApiController<User>
     {
+        protected override string controllerName => "user";
+
         public UserController(IApiService<User> userService) : base(userService)
         {
 

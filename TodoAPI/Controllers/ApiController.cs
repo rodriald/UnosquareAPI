@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TodoAPI.Controllers
 {
-    
+
     public abstract class ApiController<T> : ControllerBase
     {
+
+        protected abstract string controllerName { get; }
 
         private readonly IApiService<T> _apiService;
 
@@ -35,16 +37,15 @@ namespace TodoAPI.Controllers
         [HttpPost]
         public virtual IActionResult Create(T item)
         {
-            long itemId = _apiService.Create(item, out string todotype);
-            return RedirectToAction("GetById", "ApiController", new { id = itemId });
-            //return CreatedAtRoute(todotype, new { id = itemId }, item);
+            long itemId = _apiService.Create(item);
+            return Ok();
         }
 
         [HttpPut("{id}")]
         public virtual IActionResult Update(long id, T item)
         {
-            var user = _apiService.GetById(id);
-            if (user == null)
+            var oldItem = _apiService.GetById(id);
+            if (oldItem == null)
             {
                 return NotFound();
             }
@@ -57,8 +58,8 @@ namespace TodoAPI.Controllers
         [HttpDelete("{id}")]
         public virtual IActionResult Delete(long id)
         {
-            var user = _apiService.Delete(id);
-            if (user == null)
+            var item = _apiService.Delete(id);
+            if (item == null)
             {
                 return NotFound();
             }

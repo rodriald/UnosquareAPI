@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TodoAPI.Models;
+using Todo.Data.Models;
 
 namespace TodoAPI.Controllers
 {
@@ -11,6 +11,8 @@ namespace TodoAPI.Controllers
     [ApiController]
     public class TodoListController : ApiController<TodoList>
     {
+        protected override string controllerName => "todolist";
+
         public TodoListController(IApiService<TodoList> userService) : base(userService) {
 
         }

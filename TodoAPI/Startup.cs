@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TodoAPI.Models;
+using Todo.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using TodoAPI.Services;
 

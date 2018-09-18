@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using TodoAPI.Models;
+using Todo.Data.Models;
 
 namespace TodoAPI.Controllers
 {
@@ -12,5 +12,7 @@ namespace TodoAPI.Controllers
         {
 
         }
+
+        protected override string controllerName => "todo";
     }
 }
